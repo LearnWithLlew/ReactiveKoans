@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="ReactiveKoans" default="createZip" basedir=".">
+  <target name="createZip" depends="clean">
+    <zip zipfile="output/RxKoans.zip">
+      <fileset basedir="../">
+        <include name="**/*.cs" />
+       <include name="**/*.sln" />
+       <include name="**/*.csproj" />
+       <include name="**/*.rtf" />
+      </fileset>
+    </zip>
+  </target>
+  <target name="clean">
+    <delete dir="output" failonerror="false" />
+    <mkdir dir="output" />
+  </target>
+  
+  
+</project>
